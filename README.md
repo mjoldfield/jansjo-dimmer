@@ -3,6 +3,9 @@
 This repository relates to a simple PWM dimmer designed ostensibly for
 the Ikea Jansjö LED lamp.
 
+See [the full article](http://mjoldfield.com/atelier/2017/11/jansjo-dimmer.html)
+for more details.
+
 ## data
 
 Experimental data from the prototypes:
