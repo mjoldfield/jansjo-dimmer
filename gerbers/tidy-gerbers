@@ -1,0 +1,38 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+use Getopt::Long;
+use File::Copy qw(copy);
+
+my %Opt = ( pcbname => 'mjo'
+	  );
+
+GetOptions(\%Opt, "pcbname=s");
+
+foreach my $dir (@ARGV)
+  {
+    $dir =~ s/\/$//;
+    
+    my $tidydir = "$dir/tidy";
+    mkdir $tidydir;
+    
+    foreach my $file (glob "$dir/*")
+      {
+	next unless -f $file;
+	
+	my ($suffix) = ($file =~ /\.(.{1,4})$/);
+
+	my $new_suffix = uc($suffix);
+	$new_suffix =~ s/GM1/GML/;
+	$new_suffix =~ s/DRL/TXT/;
+
+	my $subname = "";
+	$subname = "-NPTH" if $file =~ /-NPTH\./;
+
+	my $new_file = "$tidydir/$Opt{pcbname}$subname.$new_suffix";
+
+	copy($file, $new_file);
+      }
+  }

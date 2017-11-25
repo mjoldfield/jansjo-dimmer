@@ -1,0 +1,24 @@
+name:                led-dimmer-panel
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/mjoldfield/
+license:             BSD3
+license-file:        LICENSE
+author:              Martin Oldfield
+maintainer:          ex-stack@mjoldfield.com
+copyright:           Copyright: (c) 2016 Martin Oldfield
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable pdf-exe
+  hs-source-dirs:      src
+  main-is:             pdf.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                     , diagrams, diagrams-lib, diagrams-cairo
+  default-language:    Haskell2010
+
+                     

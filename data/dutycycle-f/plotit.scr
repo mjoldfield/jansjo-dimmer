@@ -1,0 +1,10 @@
+# gnuplot script:
+# $ gnuplot plotit.scr
+
+set term pdfcairo
+set output 'out.pdf'
+
+set xlabel "Duty cycle / %" 
+set xrange [ 0.00000 : 100.000 ] noreverse nowriteback
+set ylabel "Frequency / Hz" 
+plot 'data.txt' not

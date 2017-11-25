@@ -1,0 +1,283 @@
+EESchema Schematic File Version 2
+LIBS:LED-dimmer-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:LED-dimmer-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TLC555 U1
+U 1 1 59B9A00E
+P 3550 3050
+F 0 "U1" H 3450 3475 50  0000 R CNN
+F 1 "LMC555" H 3450 3400 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 3600 2800 50  0001 L CNN
+F 3 "" H 4200 2500 50  0000 C CNN
+	1    3550 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2150 5450 2150
+Wire Wire Line
+	3550 2150 3550 2650
+Connection ~ 3550 2150
+Wire Wire Line
+	1750 4050 5450 4050
+Wire Wire Line
+	3550 3350 3550 4050
+Connection ~ 3550 4050
+Wire Wire Line
+	4050 2850 4300 2850
+Wire Wire Line
+	4300 2850 4300 2150
+Connection ~ 4300 2150
+$Comp
+L R_Small R1
+U 1 1 59B9A104
+P 3800 3600
+F 0 "R1" V 3750 3700 50  0000 L CNN
+F 1 "1k" V 3850 3700 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 3800 3600 50  0001 C CNN
+F 3 "" H 3800 3600 50  0000 C CNN
+	1    3800 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Schottky_Small D1
+U 1 1 59B9A132
+P 4300 3150
+F 0 "D1" V 4300 3000 50  0000 L CNN
+F 1 "SD103" V 4200 2900 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-123" V 4300 3150 50  0001 C CNN
+F 3 "" V 4300 3150 50  0000 C CNN
+	1    4300 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4050 3050 4500 3050
+Wire Wire Line
+	4300 3250 4300 3600
+$Comp
+L POT-RESCUE-LED-dimmer RV1
+U 1 1 59B9A1A1
+P 3350 3600
+F 0 "RV1" H 3350 3520 50  0000 C CNN
+F 1 "10k lin" H 3500 3750 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_WirePads" H 3350 3600 50  0001 C CNN
+F 3 "" H 3350 3600 50  0000 C CNN
+	1    3350 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2850 2900 2850
+Wire Wire Line
+	2900 2850 2900 3600
+Wire Wire Line
+	3050 3050 3050 3750
+Connection ~ 3050 3150
+$Comp
+L C_Small C3
+U 1 1 59B9A2BC
+P 3050 3850
+F 0 "C3" H 3060 3920 50  0000 L CNN
+F 1 "1uF" H 3060 3770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3050 3850 50  0001 C CNN
+F 3 "" H 3050 3850 50  0000 C CNN
+	1    3050 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3950 3050 4050
+Connection ~ 3050 4050
+$Comp
+L C_Small C4
+U 1 1 59B9A4DE
+P 4150 3850
+F 0 "C4" H 4160 3920 50  0000 L CNN
+F 1 "100nF" H 4160 3770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4150 3850 50  0001 C CNN
+F 3 "" H 4150 3850 50  0000 C CNN
+	1    4150 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3150 4150 3150
+Wire Wire Line
+	4150 3150 4150 3750
+Wire Wire Line
+	4150 3950 4150 4050
+Connection ~ 4150 4050
+$Comp
+L C_Small C1
+U 1 1 59B9A54F
+P 2200 3200
+F 0 "C1" H 2210 3270 50  0000 L CNN
+F 1 "1uF" H 2210 3120 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2200 3200 50  0001 C CNN
+F 3 "" H 2200 3200 50  0000 C CNN
+	1    2200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 59B9A586
+P 2450 3200
+F 0 "C2" H 2460 3270 50  0000 L CNN
+F 1 "0.1uF" H 2460 3120 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2450 3200 50  0001 C CNN
+F 3 "" H 2450 3200 50  0000 C CNN
+	1    2450 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3100 2200 2150
+Connection ~ 2200 2150
+Wire Wire Line
+	2450 3100 2450 2150
+Connection ~ 2450 2150
+Wire Wire Line
+	2200 3300 2200 4050
+Connection ~ 2200 4050
+Wire Wire Line
+	2450 3300 2450 4050
+Connection ~ 2450 4050
+$Comp
+L R_Small R2
+U 1 1 59B9A670
+P 4600 3050
+F 0 "R2" V 4550 3150 50  0000 L CNN
+F 1 "150R" V 4700 3050 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 4600 3050 50  0001 C CNN
+F 3 "" H 4600 3050 50  0000 C CNN
+	1    4600 3050
+	0    1    1    0   
+$EndComp
+Connection ~ 4300 3050
+$Comp
+L IRF540N-RESCUE-LED-dimmer Q1
+U 1 1 59B9A6ED
+P 5000 3000
+F 0 "Q1" H 5250 3075 50  0000 L CNN
+F 1 "IRL530N" H 5250 3000 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:TO-263-2" H 5250 2925 50  0001 L CIN
+F 3 "" H 5000 3000 50  0000 L CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3050 4800 3050
+Wire Wire Line
+	5100 3200 5100 4050
+Connection ~ 5100 4050
+$Comp
+L CONN_01X02 P2
+U 1 1 59B9A795
+P 4900 2500
+F 0 "P2" H 4900 2650 50  0000 C CNN
+F 1 "CONN_01X02" V 5000 2500 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_MicroLatch-53253-0270_02x2.00mm_Straight" H 4900 2500 50  0001 C CNN
+F 3 "" H 4900 2500 50  0000 C CNN
+	1    4900 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 59B9A7DB
+P 1750 2500
+F 0 "P1" H 1750 2650 50  0000 C CNN
+F 1 "CONN_01X02" V 1850 2500 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_MicroLatch-53253-0270_02x2.00mm_Straight" H 1750 2500 50  0001 C CNN
+F 3 "" H 1750 2500 50  0000 C CNN
+	1    1750 2500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1950 2550 1950 4050
+Connection ~ 1950 4050
+Wire Wire Line
+	1950 2450 1950 2150
+Connection ~ 1950 2150
+Wire Wire Line
+	5100 2450 5100 2150
+Connection ~ 5100 2150
+Wire Wire Line
+	5100 2800 5100 2550
+Connection ~ 2700 4050
+Wire Wire Line
+	2700 2150 2700 2050
+Connection ~ 2700 2150
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 59B9BA2A
+P 2700 2050
+F 0 "#FLG01" H 2700 2125 50  0001 C CNN
+F 1 "PWR_FLAG" H 2700 2200 50  0000 C CNN
+F 2 "" H 2700 2050 50  0001 C CNN
+F 3 "" H 2700 2050 50  0001 C CNN
+	1    2700 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 59B9BC29
+P 2700 4200
+F 0 "#FLG02" H 2700 4275 50  0001 C CNN
+F 1 "PWR_FLAG" H 2700 4350 50  0000 C CNN
+F 2 "" H 2700 4200 50  0001 C CNN
+F 3 "" H 2700 4200 50  0001 C CNN
+	1    2700 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 4050 2700 4200
+Wire Wire Line
+	2900 3600 3200 3600
+Wire Wire Line
+	3500 3600 3700 3600
+Wire Wire Line
+	4300 3600 3900 3600
+Wire Wire Line
+	3350 3450 3350 3350
+Wire Wire Line
+	3350 3350 3050 3350
+Connection ~ 3050 3350
+$EndSCHEMATC
